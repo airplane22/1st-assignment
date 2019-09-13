@@ -14,3 +14,13 @@ rl.on("line", function(line) {
 }).on("close", function() {
 	process.exit();
 });
+
+
+const input = prompt('');
+const arr = input.split(' ');
+
+let p = parseInt(arr[0]);
+const r = parseFloat(arr[1]);
+const y = parseInt(arr[2]);
+
+
