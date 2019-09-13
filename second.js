@@ -30,4 +30,4 @@ while (i<y) {
   console.log(p);
 }
 
-
+p.toFixed(2);
