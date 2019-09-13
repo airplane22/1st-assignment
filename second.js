@@ -27,7 +27,6 @@ let i=0;
 while (i<y) {
   p = p*((100+r)/100);
   i++
-  console.log(p);
 }
 
 p.toFixed(2);
