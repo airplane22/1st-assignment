@@ -9,25 +9,23 @@ const rl = readline.createInterface({
 });
 
 rl.on("line", function(line) {
-	console.log("Hello Goorm! Your input is", line);
+	const N = parseInt(line);
+	let clap = 0;
+
+	for (let i=1; i<N; i++) {
+		let num = i.toString();
+		let arr = [...num] ;
+		for(let item of arr){
+			if (item === '3' || item === '6' || item === '9') {
+				clap++;
+			}
+		}
+	}
+
+	console.log(clap);
 	rl.close();
 }).on("close", function() {
 	process.exit();
 });
 
 
-const Nstring = prompt('');
-const N = parseInt(Nstring);
-let clap = 0;
-
-for (let i=1; i<N; i++) {
-	let num = i.toString();
-	let arr = [...num] ;
-  for(let item of arr){
-    if (item === '3' || item === '6' || item === '9') {
-			clap++;
-  }
-	}
-}
-
-clap;

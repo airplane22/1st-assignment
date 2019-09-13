@@ -9,24 +9,23 @@ const rl = readline.createInterface({
 });
 
 rl.on("line", function(line) {
-	console.log(line);
+	const arr = line.split(' ');
+
+	let p = parseInt(arr[0]);
+	const r = parseFloat(arr[1]);
+	const y = parseInt(arr[2]);
+
+	let i=0;
+	while (i<y) {
+		p = p*((100+r)/100);
+		i++
+	}
+
+	console.log(p.toFixed(2));
 	rl.close();
 }).on("close", function() {
 	process.exit();
 });
 
 
-const input = prompt('');
-const arr = input.split(' ');
 
-let p = parseInt(arr[0]);
-const r = parseFloat(arr[1]);
-const y = parseInt(arr[2]);
-
-let i=0;
-while (i<y) {
-  p = p*((100+r)/100);
-  i++
-}
-
-p.toFixed(2);
